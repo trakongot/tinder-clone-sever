@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<!--
+Template Name: NobleUI - HTML Bootstrap 5 Admin Dashboard Template
+Author: NobleUI
+Website: https://www.nobleui.com
+Portfolio: https://themeforest.net/user/nobleui/portfolio
+Contact: nobleui123@gmail.com
+Purchase: https://1.envato.market/nobleui_admin
+License: For each use you must have a valid license purchased only from above link in order to legally use the theme for your project.
+-->
+<html lang="en">
+
+<!-- Mirrored from www.nobleui.com/html/template/demo2/pages/forms/wizard.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 08 Nov 2023 08:47:52 GMT -->
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="description" content="Responsive HTML Admin Dashboard Template based on Bootstrap 5">
+  <meta name="author" content="NobleUI">
+  <meta name="keywords"
+    content="nobleui, bootstrap, bootstrap 5, bootstrap5, admin, dashboard, template, responsive, css, sass, html, theme, front-end, ui kit, web">
+
+  <title>NobleUI - HTML Bootstrap 5 Admin Dashboard Template</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com/">
+  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&amp;display=swap"
+    rel="stylesheet">
+  <!-- End fonts -->
+
+  <!-- core:css -->
+  <link rel="stylesheet" href="../../../assets/vendors/core/core.css">
+  <!-- endinject -->
+
+  <!-- Plugin css for this page -->
+  <link rel="stylesheet" href="../../../assets/vendors/jquery-steps/jquery.steps.css">
+  <!-- End plugin css for this page -->
+
+  <!-- inject:css -->
+  <link rel="stylesheet" href="../../../assets/fonts/feather-font/css/iconfont.css">
+  <link rel="stylesheet" href="../../../assets/vendors/flag-icon-css/css/flag-icon.min.css">
+  <!-- endinject -->
+
+  <!-- Layout styles -->
+  <link rel="stylesheet" href="../../../assets/css/demo2/style.min.css">
+  <!-- End layout styles -->
+
+  <link rel="shortcut icon" href="../../../assets/images/favicon.png" />
+  
+</head>
+
+<body>
+  <div class="main-wrapper">
+
+    <!-- partial:../../partials/_sidebar.html -->
+    <nav class="sidebar">
+      <div class="sidebar-header">
+        <a href="#" class="sidebar-brand">
+          Noble<span>UI</span>
+        </a>
+        <div class="sidebar-toggler not-active">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+      <div class="sidebar-body">
+        <ul class="nav">
+          <li class="nav-item nav-category">Main</li>
+          <li class="nav-item">
+            <a href="../../dashboard.html" class="nav-link">
+              <i class="link-icon" data-feather="box"></i>
+              <span class="link-title">Dashboard</span>
+            </a>
+          </li>
+          <li class="nav-item nav-category">Components</li>
+          <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="collapse" href="#forms" role="button" aria-expanded="false"
+              aria-controls="forms">
+              <i class="link-icon" data-feather="inbox"></i>
+              <span class="link-title">Forms</span>
+              <i class="link-arrow" data-feather="chevron-down"></i>
+            </a>
+            <div class="collapse" id="forms">
+              <ul class="nav sub-menu">
+                <li class="nav-item">
+                  <a href="wizard.html" class="nav-link">Wizard</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="collapse" href="#tables" role="button" aria-expanded="false"
+              aria-controls="tables">
+              <i class="link-icon" data-feather="layout"></i>
+              <span class="link-title">Table</span>
+              <i class="link-arrow" data-feather="chevron-down"></i>
+            </a>
+            <div class="collapse" id="tables">
+              <ul class="nav sub-menu">
+                <li class="nav-item">
+                  <a href="../tables/data-table.html" class="nav-link">Data Table</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <nav class="settings-sidebar">
+      <div class="sidebar-body">
+        <a href="#" class="settings-sidebar-toggler">
+          <i data-feather="settings"></i>
+        </a>
+        <div class="theme-wrapper">
+          <h6 class="text-muted mb-2">Light Theme:</h6>
+          <a class="theme-item" href="https://www.nobleui.com/html/template/demo1/dashboard.html">
+            <img src="../../../assets/images/screenshots/light.jpg" alt="light theme">
+          </a>
+          <h6 class="text-muted mb-2">Dark Theme:</h6>
+          <a class="theme-item active" href="../../dashboard.html">
+            <img src="../../../assets/images/screenshots/dark.jpg" alt="light theme">
+          </a>
+        </div>
+      </div>
+    </nav>
+    <!-- partial -->
+
+    <div class="page-wrapper">
+
+      <!-- partial:../../partials/_navbar.html -->
+      <nav class="navbar">
+        <a href="#" class="sidebar-toggler">
+          <i data-feather="menu"></i>
+        </a>
+        <div class="navbar-content">
+          <form class="search-form">
+            <div class="input-group">
+              <div class="input-group-text">
+                <i data-feather="search"></i>
+              </div>
+              <input type="text" class="form-control" id="navbarForm" placeholder="Search here...">
+            </div>
+          </form>
+          <ul class="navbar-nav">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="languageDropdown" role="button" data-bs-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                <i class="flag-icon flag-icon-us mt-1" title="us"></i> <span
+                  class="ms-1 me-1 d-none d-md-inline-block">English</span>
+              </a>
+              <div class="dropdown-menu" aria-labelledby="languageDropdown">
+                <a href="javascript:;" class="dropdown-item py-2"><i class="flag-icon flag-icon-us" title="us"
+                    id="us"></i> <span class="ms-1"> English </span></a>
+                <a href="javascript:;" class="dropdown-item py-2"><i class="flag-icon flag-icon-fr" title="fr"
+                    id="fr"></i> <span class="ms-1"> French </span></a>
+                <a href="javascript:;" class="dropdown-item py-2"><i class="flag-icon flag-icon-de" title="de"
+                    id="de"></i> <span class="ms-1"> German </span></a>
+                <a href="javascript:;" class="dropdown-item py-2"><i class="flag-icon flag-icon-pt" title="pt"
+                    id="pt"></i> <span class="ms-1"> Portuguese </span></a>
+                <a href="javascript:;" class="dropdown-item py-2"><i class="flag-icon flag-icon-es" title="es"
+                    id="es"></i> <span class="ms-1"> Spanish </span></a>
+              </div>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="appsDropdown" role="button" data-bs-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                <i data-feather="grid"></i>
+              </a>
+              <div class="dropdown-menu p-0" aria-labelledby="appsDropdown">
+                <div class="px-3 py-2 d-flex align-items-center justify-content-between border-bottom">
+                  <p class="mb-0 fw-bold">Web Apps</p>
+                  <a href="javascript:;" class="text-muted">Edit</a>
+                </div>
+                <div class="row g-0 p-1">
+                  <div class="col-3 text-center">
+                    <a href="../apps/chat.html"
+                      class="dropdown-item d-flex flex-column align-items-center justify-content-center wd-70 ht-70"><i
+                        data-feather="message-square" class="icon-lg mb-1"></i>
+                      <p class="tx-12">Chat</p>
+                    </a>
+                  </div>
+                  <div class="col-3 text-center">
+                    <a href="../apps/calendar.html"
+                      class="dropdown-item d-flex flex-column align-items-center justify-content-center wd-70 ht-70"><i
+                        data-feather="calendar" class="icon-lg mb-1"></i>
+                      <p class="tx-12">Calendar</p>
+                    </a>
+                  </div>
+                  <div class="col-3 text-center">
+                    <a href="../email/inbox.html"
+                      class="dropdown-item d-flex flex-column align-items-center justify-content-center wd-70 ht-70"><i
+                        data-feather="mail" class="icon-lg mb-1"></i>
+                      <p class="tx-12">Email</p>
+                    </a>
+                  </div>
+                  <div class="col-3 text-center">
+                    <a href="../general/profile.html"
+                      class="dropdown-item d-flex flex-column align-items-center justify-content-center wd-70 ht-70"><i
+                        data-feather="instagram" class="icon-lg mb-1"></i>
+                      <p class="tx-12">Profile</p>
+                    </a>
+                  </div>
+                </div>
+                <div class="px-3 py-2 d-flex align-items-center justify-content-center border-top">
+                  <a href="javascript:;">View all</a>
+                </div>
+              </div>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="messageDropdown" role="button" data-bs-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                <i data-feather="mail"></i>
+              </a>
+              <div class="dropdown-menu p-0" aria-labelledby="messageDropdown">
+                <div class="px-3 py-2 d-flex align-items-center justify-content-between border-bottom">
+                  <p>9 New Messages</p>
+                  <a href="javascript:;" class="text-muted">Clear all</a>
+                </div>
+                <div class="p-1">
+                  <a href="javascript:;" class="dropdown-item d-flex align-items-center py-2">
+                    <div class="me-3">
+                      <img class="wd-30 ht-30 rounded-circle" src="../../../assets/images/faces/face2.jpg" alt="userr">
+                    </div>
+                    <div class="d-flex justify-content-between flex-grow-1">
+                      <div class="me-4">
+                        <p>Leonardo Payne</p>
+                        <p class="tx-12 text-muted">Project status</p>
+                      </div>
+                      <p class="tx-12 text-muted">2 min ago</p>
+                    </div>
+                  </a>
+                  <a href="javascript:;" class="dropdown-item d-flex align-items-center py-2">
+                    <div class="me-3">
+                      <img class="wd-30 ht-30 rounded-circle" src="../../../assets/images/faces/face3.jpg" alt="userr">
+                    </div>
+                    <div class="d-flex justify-content-between flex-grow-1">
+                      <div class="me-4">
+                        <p>Carl Henson</p>
+                        <p class="tx-12 text-muted">Client meeting</p>
+                      </div>
+                      <p class="tx-12 text-muted">30 min ago</p>
+                    </div>
+                  </a>
+                  <a href="javascript:;" class="dropdown-item d-flex align-items-center py-2">
+                    <div class="me-3">
+                      <img class="wd-30 ht-30 rounded-circle" src="../../../assets/images/faces/face4.jpg" alt="userr">
+                    </div>
+                    <div class="d-flex justify-content-between flex-grow-1">
+                      <div class="me-4">
+                        <p>Jensen Combs</p>
+                        <p class="tx-12 text-muted">Project updates</p>
+                      </div>
+                      <p class="tx-12 text-muted">1 hrs ago</p>
+                    </div>
+                  </a>
+                  <a href="javascript:;" class="dropdown-item d-flex align-items-center py-2">
+                    <div class="me-3">
+                      <img class="wd-30 ht-30 rounded-circle" src="../../../assets/images/faces/face5.jpg" alt="userr">
+                    </div>
+                    <div class="d-flex justify-content-between flex-grow-1">
+                      <div class="me-4">
+                        <p>Amiah Burton</p>
+                        <p class="tx-12 text-muted">Project deatline</p>
+                      </div>
+                      <p class="tx-12 text-muted">2 hrs ago</p>
+                    </div>
+                  </a>
+                  <a href="javascript:;" class="dropdown-item d-flex align-items-center py-2">
+                    <div class="me-3">
+                      <img class="wd-30 ht-30 rounded-circle" src="../../../assets/images/faces/face6.jpg" alt="userr">
+                    </div>
+                    <div class="d-flex justify-content-between flex-grow-1">
+                      <div class="me-4">
+                        <p>Yaretzi Mayo</p>
+                        <p class="tx-12 text-muted">New record</p>
+                      </div>
+                      <p class="tx-12 text-muted">5 hrs ago</p>
+                    </div>
+                  </a>
+                </div>
+                <div class="px-3 py-2 d-flex align-items-center justify-content-center border-top">
+                  <a href="javascript:;">View all</a>
+                </div>
+              </div>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="notificationDropdown" role="button"
+                data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i data-feather="bell"></i>
+                <div class="indicator">
+                  <div class="circle"></div>
+                </div>
+              </a>
+              <div class="dropdown-menu p-0" aria-labelledby="notificationDropdown">
+                <div class="px-3 py-2 d-flex align-items-center justify-content-between border-bottom">
+                  <p>6 New Notifications</p>
+                  <a href="javascript:;" class="text-muted">Clear all</a>
+                </div>
+                <div class="p-1">
+                  <a href="javascript:;" class="dropdown-item d-flex align-items-center py-2">
+                    <div
+                      class="wd-30 ht-30 d-flex align-items-center justify-content-center bg-primary rounded-circle me-3">
+                      <i class="icon-sm text-white" data-feather="gift"></i>
+                    </div>
+                    <div class="flex-grow-1 me-2">
+                      <p>New Order Recieved</p>
+                      <p class="tx-12 text-muted">30 min ago</p>
+                    </div>
+                  </a>
+                  <a href="javascript:;" class="dropdown-item d-flex align-items-center py-2">
+                    <div
+                      class="wd-30 ht-30 d-flex align-items-center justify-content-center bg-primary rounded-circle me-3">
+                      <i class="icon-sm text-white" data-feather="alert-circle"></i>
+                    </div>
+                    <div class="flex-grow-1 me-2">
+                      <p>Server Limit Reached!</p>
+                      <p class="tx-12 text-muted">1 hrs ago</p>
+                    </div>
+                  </a>
+                  <a href="javascript:;" class="dropdown-item d-flex align-items-center py-2">
+                    <div
+                      class="wd-30 ht-30 d-flex align-items-center justify-content-center bg-primary rounded-circle me-3">
+                      <img class="wd-30 ht-30 rounded-circle" src="../../../assets/images/faces/face6.jpg" alt="userr">
+                    </div>
+                    <div class="flex-grow-1 me-2">
+                      <p>New customer registered</p>
+                      <p class="tx-12 text-muted">2 sec ago</p>
+                    </div>
+                  </a>
+                  <a href="javascript:;" class="dropdown-item d-flex align-items-center py-2">
+                    <div
+                      class="wd-30 ht-30 d-flex align-items-center justify-content-center bg-primary rounded-circle me-3">
+                      <i class="icon-sm text-white" data-feather="layers"></i>
+                    </div>
+                    <div class="flex-grow-1 me-2">
+                      <p>Apps are ready for update</p>
+                      <p class="tx-12 text-muted">5 hrs ago</p>
+                    </div>
+                  </a>
+                  <a href="javascript:;" class="dropdown-item d-flex align-items-center py-2">
+                    <div
+                      class="wd-30 ht-30 d-flex align-items-center justify-content-center bg-primary rounded-circle me-3">
+                      <i class="icon-sm text-white" data-feather="download"></i>
+                    </div>
+                    <div class="flex-grow-1 me-2">
+                      <p>Download completed</p>
+                      <p class="tx-12 text-muted">6 hrs ago</p>
+                    </div>
+                  </a>
+                </div>
+                <div class="px-3 py-2 d-flex align-items-center justify-content-center border-top">
+                  <a href="javascript:;">View all</a>
+                </div>
+              </div>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="profileDropdown" role="button" data-bs-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                <img class="wd-30 ht-30 rounded-circle" src="../../../assets/images/faces/face1.jpg" alt="profile">
+              </a>
+              <div class="dropdown-menu p-0" aria-labelledby="profileDropdown">
+                <div class="d-flex flex-column align-items-center border-bottom px-5 py-3">
+                  <div class="mb-3">
+                    <img class="wd-80 ht-80 rounded-circle" src="../../../assets/images/faces/face1.jpg" alt="">
+                  </div>
+                  <div class="text-center">
+                    <p class="tx-16 fw-bolder">Amiah Burton</p>
+                    <p class="tx-12 text-muted">amiahburton@gmail.com</p>
+                  </div>
+                </div>
+                <ul class="list-unstyled p-1">
+                  <li class="dropdown-item py-2">
+                    <a href="../general/profile.html" class="text-body ms-0">
+                      <i class="me-2 icon-md" data-feather="user"></i>
+                      <span>Profile</span>
+                    </a>
+                  </li>
+                  <li class="dropdown-item py-2">
+                    <a href="javascript:;" class="text-body ms-0">
+                      <i class="me-2 icon-md" data-feather="edit"></i>
+                      <span>Edit Profile</span>
+                    </a>
+                  </li>
+                  <li class="dropdown-item py-2">
+                    <a href="javascript:;" class="text-body ms-0">
+                      <i class="me-2 icon-md" data-feather="repeat"></i>
+                      <span>Switch User</span>
+                    </a>
+                  </li>
+                  <li class="dropdown-item py-2">
+                    <a href="javascript:;" class="text-body ms-0">
+                      <i class="me-2 icon-md" data-feather="log-out"></i>
+                      <span>Log Out</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <!-- partial -->
+
+      <div class="page-content">
+
+        <nav class="page-breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Forms</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Wizard</li>
+          </ol>
+        </nav>
+
+        <div class="row">
+          <div class="col-md-12 grid-margin stretch-card">
+            <div class="card">
+              <div class="card-body">
+                <h4 class="card-title">Horizontal wizard</h4>
+                <p class="text-muted mb-3">Read the <a href="http://www.jquery-steps.com/GettingStarted"
+                    target="_blank"> Official jQuery Steps Documentation </a>for a full list of instructions and other
+                  options.</p>
+                <div id="wizardOTP">
+                  <div class="className_1">
+                    <h2>First Step</h2>
+                    <section style="overflow-y: auto; height: 400px;">
+                      <h4>Please read through the instructions below to create virtual users</h4>
+                      <p>Creating virtual users securely involves implementing steps to ensure the authenticity and safety
+                        of the user accounts. Here's an essay-style breakdown of a four-step process to safely create
+                        virtual users, focusing on OTP (One-Time Password) and password change procedures to streamline
+                        the process:</p>
+                      <br>
+                      <p>Title: "Secure Steps in Creating Virtual Users: A Four-Step Process Ensuring Safety and
+                        Authenticity"</p>
+                      <br>
+                      <p>In the digital age, establishing virtual user accounts demands stringent measures to uphold
+                        security and authenticity. A comprehensive four-step procedure has been devised by our staff,
+                        centering on OTP verification and password modification, ensuring a smooth and secure creation
+                        process.</p>
+                      <br>
+                      <p>The first step in this meticulous process involves the utilization of OTPs, enhancing account
+                        security by confirming the legitimacy of users. OTPs, generated through various authenticator
+                        applications or sent via text message or email, serve as a dynamic authentication method,
+                        bolstering the validation process beyond mere passwords. This step acts as an initial gatekeeper,
+                        fortifying the user verification process and reducing the risk of unauthorized access.</p>
+                      <br>
+                      <p>Following the OTP verification, the second step pivots toward password management, emphasizing
+                        the need for a robust and unique password. Users are prompted to create a strong password
+                        conforming to stringent criteria, incorporating a combination of uppercase and lowercase letters,
+                        numerals, and special characters. Additionally, the system mandates periodic password changes,
+                        further fortifying security against potential breaches. Educating users about the significance of
+                        password strength and regular updates enhances their understanding of cybersecurity best
+                        practices.</p>
+                      <br>
+                      <p>Moving ahead, the third step involves a mandatory password modification process immediately after
+                        the initial login. This precautionary measure mitigates vulnerabilities that may arise due to
+                        default or temporary passwords. Users are prompted to change their passwords, replacing the
+                        temporary one with a personalized, secure alternative. This proactive approach significantly
+                        reduces the window of vulnerability associated with default passwords and minimizes the risk of
+                        unauthorized entry.</p>
+                      <br>
+                      <p>Conclusively, the fourth step reinforces the importance of ongoing security measures and user
+                        responsibility. Regular awareness campaigns and educational materials are disseminated to apprise
+                        users of evolving cybersecurity threats and best practices. Encouraging the adoption of two-factor
+                        authentication (2FA) further augments account security, presenting an additional layer of defense
+                        against potential breaches.</p>
+                      <br>
+                      <p>In essence, the four-step procedure encapsulates a robust framework for creating virtual users,
+                        prioritizing security without compromising user experience. By amalgamating OTP verification with
+                        stringent password protocols and ongoing user education, this process lays the foundation for a
+                        secure and user-friendly virtual environment.</p>
+                      <br>
+                      <p>Implementing these steps ensures not only the creation of virtual users but also their sustained
+                        protection in an ever-evolving digital landscape, fostering trust and reliability in the system's
+                        integrity.</p>
+                      <br>
+                      <p>Through these measures, our staff endeavors to establish a secure, seamless, and user-centric
+                        approach to virtual user creation, safeguarding sensitive information and bolstering overall
+                        system resilience.</p>
+                      <button class="btn btn-primary" id="button1" onclick="readIntroduction123()">Tiếp theo</button>
+                    </section>
+                  </div>
+
+                  <div  style="display: none;" class="className_2">
+                    <h2>Second Step</h2>
+                    <section style="overflow-y: auto; height: 400px;">
+                      <h4>Enter the password</h4>
+                      <div class="mb-3">
+                        <input id="password" class="form-control" name="password" type="password">
+                      </div>
+                      <button class="btn btn-primary" id="button2">Tiếp theo</button>
+                    </section>
+                  </div>
+
+                  <div style="display: none;" class="className_3">
+                    <h2>Third Step</h2>
+                    <section style="overflow-y: auto; height: 400px;">
+                      <button class="btn btn-primary" id="getOTP">Get OTP</button>
+                      <h4>Enter the OTP</h4>
+                      <div class="mb-3">
+                        <input id="OTP" class="form-control" name="password" type="text">
+                      </div>
+                      <button class="btn btn-primary" id="button3">Tiếp theo</button>
+                    </section>
+                  </div>
+
+                  <div style="display: none;" class="className_4">
+                    <h2>Fourth Step</h2>
+                    <section style="overflow-y: auto; height: 400px;">
+                      <h4>Gen Virtual Users</h4> <br>
+                      <h5>Input the number of users you want to generate</h5>
+                      <br>
+                      <div class="col-sm-9">
+                        <input id="numberUser" type="number" class="form-control" id="exampleInputMobile" placeholder="Input number">
+                      </div>
+                      <button class="btn btn-primary" id="button4">Tiếp theo</button>
+                    </section>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+      </div>
+
+      <!-- partial:../../partials/_footer.html -->
+      <footer
+        class="footer d-flex flex-column flex-md-row align-items-center justify-content-between px-4 py-3 border-top small">
+        <p class="text-muted mb-1 mb-md-0">Copyright © 2022 <a href="https://www.nobleui.com/"
+            target="_blank">NobleUI</a>.</p>
+        <p class="text-muted">Handcrafted With <i class="mb-1 text-primary ms-1 icon-sm" data-feather="heart"></i></p>
+      </footer>
+      <!-- partial -->
+
+    </div>
+  </div>
+
+  <!-- core:js -->
+  <script src="../../../assets/vendors/core/core.js"></script>
+  <!-- endinject -->
+
+  <!-- Plugin js for this page -->
+  <script src="../../../assets/vendors/jquery-steps/jquery.steps.min.js"></script>
+  <!-- End plugin js for this page -->
+
+  <!-- inject:js -->
+  <script src="../../../assets/vendors/feather-icons/feather.min.js"></script>
+  <script src="../../../assets/js/template.js"></script>
+  <!-- endinject -->
+
+  <!-- Custom js for this page -->
+  <script src="../../../assets/js/wizard.js"></script>
+  <!-- End custom js for this page -->
+
+</body>
+
+<!-- Mirrored from www.nobleui.com/html/template/demo2/pages/forms/wizard.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 08 Nov 2023 08:47:53 GMT -->
+
+</html>
