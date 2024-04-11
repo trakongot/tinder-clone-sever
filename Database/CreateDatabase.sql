@@ -42,7 +42,7 @@ LiveAt nvarchar(255),
 Token nvarchar(255),
 TokenCreated Datetime,
 TokenExpires Datetime,
-OfStatus tinyint default(1)
+OfStatus tinyint default(1),
 LastLogin Datetime,
 )
 
