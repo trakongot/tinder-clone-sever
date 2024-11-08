@@ -1,5 +1,5 @@
 # Tinder Clone Admin + Sever
-Link Client: https://github.com/trakongot/tinder_clone_client
+Link Client: https://github.com/trakongot/tinder-clone-client.
 ### Công nghệ sử dụng
 
 - **ASP.NET Web API:**
